@@ -12,8 +12,6 @@ import { useState } from "react";
 // }
 
 function App() {
-
-
   async function getAccount() {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
       .catch((err) => {
@@ -29,9 +27,9 @@ function App() {
     console.log(account)
   }
   
-  getAccount().then(() => {
-    console.log("Connected");
-  })
+  // getAccount().then(() => {
+  //   console.log("Connected");
+  // })
 
   // signWallet().then(() => {
   //   console.log("Wallet signed");
