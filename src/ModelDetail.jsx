@@ -1,41 +1,21 @@
 import Canvas from "./canvas";
-import { useSDK } from "@metamask/sdk-react";
 
 import Customizer from "./pages/Customizer";
 import { getAddress, getClient, getSigningClient } from "./lib/client";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
-import { MetaMaskButton, MetaMaskUIProvider } from "@metamask/sdk-react-ui";
-import List3DModel from "./components/List3DModel";
-import { useParams } from "react-router-dom";
+import { MetaMaskButton } from "@metamask/sdk-react-ui";
 
-const signWallet = async () => {
-  await getSigningClient();
-  const address = await getAddress();
-  return address;
-};
+// const signWallet = async () => {
+//   await getSigningClient();
+//   const address = await getAddress();
+//   return address;
+// };
 
-function App() {
+function ModelDetail() {
   const [account, setAccount] = useState(null);
-  // const [address, setAddress] = useState(null);
-  const [model, setModel] = useState("");
-
-  let { id } = useParams();
-  // console.log(id);
-
-  useEffect(() => {
-    const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const projectFound = projects.find((project) => {
-      return project.id == id.substring(1);
-    });
-    if (projectFound.name.startsWith("Cup")) {
-      projectFound.model = "Cup";
-    } else {
-      projectFound.model = "Shirt";
-    }
-    setModel(projectFound);
-  }, [id]);
-
+  const [address, setAddress] = useState(null);
+  const [models, setModels] = useState([]);
   // const { sdk, connected, connecting, provider, chainId } = useSDK();
 
   async function getAccount() {
@@ -87,39 +67,30 @@ function App() {
     console.log(account);
   }, [account]);
 
-  signWallet()
-    .then((address) => {
-      setAddress(address);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  // signWallet()
+  //   .then((address) => {
+  //     setAddress(address);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
 
   return (
-    // <MetaMaskUIProvider
-    //   sdkOptions={{
-    //     dappMetadata: {
-    //       name: "OraiDECAL",
-    //       url: window.location.host,
-    //     },
-    //   }}
-    // >
-      <>
-        <main className="app transition-all ease-in">
-          {/* <MetaMaskButton theme={"light"} color="white"></MetaMaskButton> */}
-          {/* <button
+    <>
+      <main className="app transition-all ease-in">
+        <MetaMaskButton theme={"light"} color="white"></MetaMaskButton>
+        {/* <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           onClick={connectMetaMaskWallet}
         >
           {account ? "Disconnect" : "Connect"}
         </button> */}
-          <Home />
-          <Canvas model={model} />
-          <Customizer />
-        </main>
-      </>
-    // </MetaMaskUIProvider>
+        <Home />
+        <Canvas />
+        <Customizer />
+      </main>
+    </>
   );
 }
 
-export default App;
+export default ModelDetail;

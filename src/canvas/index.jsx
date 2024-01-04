@@ -1,5 +1,13 @@
 import { Canvas, useThree } from "@react-three/fiber";
-import { Environment, Center, OrbitControls, Box, PerspectiveCamera, RandomizedLight, AccumulativeShadows } from "@react-three/drei";
+import {
+  Environment,
+  Center,
+  OrbitControls,
+  Box,
+  PerspectiveCamera,
+  RandomizedLight,
+  AccumulativeShadows,
+} from "@react-three/drei";
 import { useControls } from "leva";
 import { GUI } from "dat.gui";
 
@@ -11,7 +19,7 @@ import Shoes from "./Shoes";
 import { useState } from "react";
 import Cup from "./Cup";
 
-const CanvasModel = () => {
+const CanvasModel = ({ model }) => {
   //   const [camera, setCamera] = useState({
   //     position: [5, 5, 2],
   //     fov: 25
@@ -48,16 +56,14 @@ const CanvasModel = () => {
 
   const Temp = () => {
     const camera = useThree(({ camera }) => {
-      camera.position.set(...position)
-      camera.fov = fov
-      camera.updateProjectionMatrix()
-      return camera
-    })
-    console.log(camera)
-    console.log(camera.fov)
-  }
-
-  
+      camera.position.set(...position);
+      camera.fov = fov;
+      camera.updateProjectionMatrix();
+      return camera;
+    });
+    console.log(camera);
+    console.log(camera.fov);
+  };
 
   return (
     // <Canvas
@@ -85,10 +91,13 @@ const CanvasModel = () => {
     //   <OrbitControls />
     // </Canvas>
     <Canvas shadows orthographic camera={{ position: [0, 10, 100], zoom: 140 }}>
-    <ambientLight intensity={0.5} />
-    <directionalLight intensity={0.5} position={[10, 10, 10]} />
-    <Cup scale={2} position={[0, -1, 0]} />
-    {/* <AccumulativeShadows
+      <ambientLight intensity={0.5} />
+      <directionalLight intensity={0.5} position={[10, 10, 10]} />
+
+      {model.model === "Shirt" && <Shirt />}
+      {model.model === "Cup" && <Cup scale={2} position={[0, -1, 0]} />}
+      {/* <Shirt /> */}
+      {/* <AccumulativeShadows
       temporal
       frames={100}
       alphaTest={0.95}
@@ -106,8 +115,8 @@ const CanvasModel = () => {
         size={10}
       />
     </AccumulativeShadows> */}
-    <OrbitControls makeDefault />
-  </Canvas>
+      <OrbitControls makeDefault />
+    </Canvas>
   );
 };
 
