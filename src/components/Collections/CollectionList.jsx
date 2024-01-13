@@ -2,8 +2,10 @@ import { useCollection } from "../../context/CollectionProvider";
 import { CollectionItem } from "./CollectionItem";
 import { Header } from "./Header";
 import { SearchBar } from "./SearchBar";
+import { callChatbotApi } from "../../api/chatbot";
 
 export const CollectionList = () => {
+  callChatbotApi();
   const { collection } = useCollection();
 
   return (

@@ -38,9 +38,9 @@ const Shirt = ({ controls }) => {
         material-roughness={1}
         dispose={null}
       >
-        {/* {snap.isFullTexture && (
-          <Decal position={[0, 0, 0]} rotation={[0, 0, 0]} scale={1} map={fullTexture2}  />
-        )} */}
+        {snap.isFullTexture && (
+          <Decal position={[0, 0, 0]} rotation={[0, 0, 0]} scale={1} map={logoTexture}  />
+        )}
 
         <group position={[0, 0.04, 0.15]}>
           <PivotControls
