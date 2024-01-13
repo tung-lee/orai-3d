@@ -1,0 +1,246 @@
+.prompt-main {
+  background-color: #191919;
+  height: 500px;
+  width: 300px;
+  border-radius: 20px;
+}
+.prompt {
+  display: flex;
+  flex-direction: column;
+  background-color: #191919;
+  color: white;
+  border-radius: 26px;
+  box-shadow: 0px 10px 30px rgba(142, 141, 141, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: text;
+  position: absolute;
+  bottom: 10%;
+  width: 95%;
+  left: 0;
+  width: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prompt-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.prompt-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 120px;
+  background: #333437;
+  border-radius: 20px;
+}
+
+textarea[typeof="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.new-chat {
+  display: flex;
+  height: 27px;
+  width: 225px;
+  position: absolute;
+  bottom: 2.5%;
+  font-size: 12px;
+  color: white;
+  border: 1px solid #333437;
+  border-radius: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #191919;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.new-chat:hover {
+  border-color: #6d6969;
+  background-color: #333437;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 106px;
+  position: absolute;
+  width: 300px;
+  height: 76px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(95.08deg, #66dddd -12.04%, #a5e8c4 106.2%);
+}
+
+.network {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  gap: 10px;
+  width: 176px;
+  height: 40px;
+  background: #efefef;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-family: "Outfit", sans-serif;
+}
+
+.account-info {
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+
+.message-ul {
+  height: 320px;
+  position: absolute;
+  top: 100px;
+  /* width: 380px; */
+  overflow: auto;
+  /* overflow-y: scroll; */
+  scrollbar-width: thin;
+  scrollbar-color: #777 #eee;
+  left: 10px;
+}
+
+.message-ul::-webkit-scrollbar-track {
+  background-color: #777;
+}
+.message-ul::-webkit-scrollbar-thumb {
+  background-color: #eee;
+}
+/* 滚动条滑块悬停状态 */
+.message-ul::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+
+.message-ul::-webkit-scrollbar {
+  width: 3px;
+}
+
+.message-ul ul {
+  /* overflow-y: scroll; */
+  overflow: auto;
+  padding-left: 0;
+}
+
+.code-select {
+  background: #1a1a1a;
+  position: absolute;
+  left: 21px;
+  top: 340px;
+  width: 359px;
+  height: 90px;
+  border: 1px solid #333437;
+  border-radius: 16px;
+}
+
+.select-item {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 5px 5px;
+  color: white;
+  width: 346px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.select-item:hover {
+  background: #8f8c8c;
+  cursor: pointer;
+}
+
+.select-item h2 {
+  height: 18px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 1px;
+  margin-top: 5px;
+}
+
+.select-item p {
+  height: 12px;
+  line-height: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 1px;
+}
+
+.loading {
+  height: 600px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.history {
+  height: 500px;
+  width: 200px;
+  background: #191919;
+  position: absolute;
+  top: 76px;
+  left: 0px;
+  z-index: 10000;
+  border-radius: 16px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #777 #eee;
+}
+.history-header {
+  background: #333437;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+.prompt-history {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.prompt-history:hover {
+  background: #555;
+}
+
+.prompt-history-text {
+  font-size: 15px;
+  margin-left: 5px;
+  width: 150px;
+  align-items: center;
+  color: #efefef;
+}

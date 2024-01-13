@@ -19,7 +19,7 @@ import Shoes from "./Shoes";
 import { useState } from "react";
 import Cup from "./Cup";
 
-const CanvasModel = ({ model }) => {
+const CanvasModel = ({ collectionFound }) => {
   //   const [camera, setCamera] = useState({
   //     position: [5, 5, 2],
   //     fov: 25
@@ -69,7 +69,6 @@ const CanvasModel = ({ model }) => {
     debug: false,
     image: { image: "/0dcfb548989afdf22afff75e2a46a508.jpg" },
     scale: { value: 1, min: 0, max: 2 },
-
   });
 
   return (
@@ -101,8 +100,10 @@ const CanvasModel = ({ model }) => {
       <ambientLight intensity={0.5} />
       <directionalLight intensity={0.5} position={[10, 10, 10]} />
       {/* <Backdrop /> */}
-      {model.model === "Shirt" && <Shirt controls={controls}/>}
-      {model.model === "Cup" && <Cup scale={2} position={[0, -1, 0]} controls={controls}/>}
+      {collectionFound.name === "Shirt" && <Shirt controls={controls} />}
+      {collectionFound.name === "Cup" && (
+        <Cup scale={2} position={[0, -1, 0]} controls={controls} />
+      )}
       {/* <Shirt /> */}
       {/* <AccumulativeShadows
       temporal

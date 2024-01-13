@@ -5,8 +5,86 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --big-text-font-family: "LexendDeca-Regular", Helvetica;
+  --big-text-font-size: 24px;
+  --big-text-font-style: normal;
+  --big-text-font-weight: 400;
+  --big-text-letter-spacing: 0px;
+  --big-text-line-height: normal;
+  --collection-1-line: rgba(74, 74, 74, 1);
+  --header-1-font-family: "LexendDeca-Light", Helvetica;
+  --header-1-font-size: 70px;
+  --header-1-font-style: normal;
+  --header-1-font-weight: 300;
+  --header-1-letter-spacing: -7px;
+  --header-1-line-height: normal;
+  --header-2-font-family: "LexendDeca-Regular", Helvetica;
+  --header-2-font-size: 42px;
+  --header-2-font-style: normal;
+  --header-2-font-weight: 400;
+  --header-2-letter-spacing: 0px;
+  --header-2-line-height: normal;
+  --header-3-font-family: "LexendDeca-Regular", Helvetica;
+  --header-3-font-size: 24px;
+  --header-3-font-style: normal;
+  --header-3-font-weight: 400;
+  --header-3-letter-spacing: -2.4px;
+  --header-3-line-height: normal;
+  --text-color: rgba(165, 165, 165, 1);
+  --text-font-family: "Gabarito-Regular", Helvetica;
+  --text-font-size: 16px;
+  --text-font-style: normal;
+  --text-font-weight: 400;
+  --text-letter-spacing: 0px;
+  --text-line-height: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
 html {
   font-family: "Inter", sans-serif;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 @supports (font-variation-settings: normal) {

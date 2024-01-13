@@ -1,13 +1,11 @@
 import Canvas from "./canvas";
-import { useSDK } from "@metamask/sdk-react";
 
 import Customizer from "./pages/Customizer";
 import { getAddress, getClient, getSigningClient } from "./lib/client";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
-import { MetaMaskButton, MetaMaskUIProvider } from "@metamask/sdk-react-ui";
-import List3DModel from "./components/List3DModel";
 import { useParams } from "react-router-dom";
+import { useCollection } from "./context/CollectionProvider";
 
 const signWallet = async () => {
   await getSigningClient();
@@ -18,25 +16,13 @@ const signWallet = async () => {
 function App() {
   const [account, setAccount] = useState(null);
   // const [address, setAddress] = useState(null);
-  const [model, setModel] = useState("");
 
   let { id } = useParams();
-  // console.log(id);
-
-  useEffect(() => {
-    const projects = JSON.parse(localStorage.getItem("projects")) || [];
-    const projectFound = projects.find((project) => {
-      return project.id == id.substring(1);
-    });
-    if (projectFound.name.startsWith("Cup")) {
-      projectFound.model = "Cup";
-    } else {
-      projectFound.model = "Shirt";
-    }
-    setModel(projectFound);
-  }, [id]);
-
-  // const { sdk, connected, connecting, provider, chainId } = useSDK();
+  const { collection } = useCollection();
+  const collectionFound = collection.find((item) => {
+    return item.id == id;
+  });
+  console.log(collectionFound);
 
   async function getAccount() {
     const accounts = await window.ethereum
@@ -104,20 +90,20 @@ function App() {
     //     },
     //   }}
     // >
-      <>
-        <main className="app transition-all ease-in">
-          {/* <MetaMaskButton theme={"light"} color="white"></MetaMaskButton> */}
-          {/* <button
+    <>
+      <main className="app transition-all ease-in">
+        {/* <MetaMaskButton theme={"light"} color="white"></MetaMaskButton> */}
+        {/* <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           onClick={connectMetaMaskWallet}
         >
           {account ? "Disconnect" : "Connect"}
         </button> */}
-          <Home />
-          <Canvas model={model} />
-          <Customizer />
-        </main>
-      </>
+        <Home />
+        <Canvas collectionFound={collectionFound} />
+        <Customizer />
+      </main>
+    </>
     // </MetaMaskUIProvider>
   );
 }

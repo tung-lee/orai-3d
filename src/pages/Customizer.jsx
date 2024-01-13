@@ -8,7 +8,14 @@ import { download } from "../assets";
 import { downloadCanvasToImage, reader } from "../config/helpers";
 import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
 import { fadeAnimation, slideAnimation } from "../config/motion";
-import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from "../components";
+import {
+  AIPicker,
+  ColorPicker,
+  CustomButton,
+  FilePicker,
+  Tab,
+} from "../components";
+import { Sidebar } from "../components/Prompt/Sidebar";
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -17,6 +24,8 @@ const Customizer = () => {
 
   const [prompt, setPrompt] = useState("");
   const [generatingImg, setGeneratingImg] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false); // Prompt sidebar
 
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
@@ -39,6 +48,10 @@ const Customizer = () => {
             generatingImg={generatingImg}
             handleSubmit={handleSubmit}
           />
+        );
+      case "prompt":
+        return (
+          <Sidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
         );
       default:
         return null;
@@ -120,19 +133,34 @@ const Customizer = () => {
           <motion.div
             key="custom"
             className="absolute top-0 left-0 z-10"
-            {...slideAnimation("left")}>
+            {...slideAnimation("left")}
+          >
             <div className="flex items-center min-h-screen">
               <div className="editortabs-container tabs">
                 {EditorTabs.map((tab) => (
-                  <Tab key={tab.name} tab={tab} handleClick={() => setActiveEditorTab(tab.name)} />
+                  <Tab
+                    key={tab.name}
+                    tab={tab}
+                    handleClick={() => setActiveEditorTab(tab.name)}
+                  />
                 ))}
-
+                <Tab
+                    key={"prompt"}
+                    tab={{name: "prompt", icon: null}}
+                    handleClick={() => {
+                      setActiveEditorTab("prompt")
+                      setIsExpanded(true)
+                    }}
+                  />
                 {generateTabContent()}
               </div>
             </div>
           </motion.div>
 
-          <motion.div className="absolute z-10 top-5 right-5" {...fadeAnimation}>
+          <motion.div
+            className="absolute z-10 top-5 right-5"
+            {...fadeAnimation}
+          >
             <CustomButton
               type="filled"
               title="Go Back"
@@ -141,7 +169,10 @@ const Customizer = () => {
             />
           </motion.div>
 
-          <motion.div className="filtertabs-container" {...slideAnimation("up")}>
+          <motion.div
+            className="filtertabs-container"
+            {...slideAnimation("up")}
+          >
             {FilterTabs.map((tab) => (
               <Tab
                 key={tab.name}
