@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
 import Form from "../pages/Form";
 import { CollectionList } from "../components/Collections/CollectionList";
-import { BotOrai } from "../canvas/BotOrai";
 import { LandingPage } from "../components/LandingPage";
 
 export default function MyRouter() {
