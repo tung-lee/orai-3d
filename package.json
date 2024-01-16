@@ -4,12 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "env-cmd -f .env vite",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "dev:testnet": "env-cmd -f .env.test vite"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@metamask/sdk-react": "^0.14.1",
@@ -17,6 +16,8 @@
     "@microsoft/fetch-event-source": "^2.0.1",
     "@react-three/drei": "^9.80.9",
     "@react-three/fiber": "^8.13.7",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.28",
     "cosmwasm": "^1.1.1",
     "dat.gui": "^0.7.9",
     "env-cmd": "^10.1.0",
