@@ -1,4 +1,5 @@
 import Spline from "@splinetool/react-spline";
+import styles from "./LandingPage.module.css";
 
 export const LandingPage = () => {
   return (
@@ -91,17 +92,19 @@ export const LandingPage = () => {
                 </div>
               </div>
               {/* <img className="absolute w-[488px] h-[205px] top-[172px] left-[510px]" alt="Frame" src="frame-2.svg" /> */}
-              
             </div>
           </div>
-          <Spline
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-                scene="https://prod.spline.design/fqT4izJ4Lt3Bdfkj/scene.splinecode"
-              />
+          <div className={styles.wrapper}>
+            <Spline
+              className={styles.spline}
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+              scene="https://prod.spline.design/fqT4izJ4Lt3Bdfkj/scene.splinecode"
+            />
+          </div>
           <div className="flex w-[1512px] items-center justify-between px-[45px] py-0 relative flex-[0_0_auto] border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
             <img
               className="relative w-[379px] h-[321px]"

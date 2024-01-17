@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.spline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  display: "flex";
+  justify-content: "center";
+}
