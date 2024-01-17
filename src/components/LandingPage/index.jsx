@@ -134,7 +134,7 @@ export const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[1512px] items-end justify-center px-0 py-[24px] relative flex-[0_0_auto]">
+          <div className="flex w-[1512px] items-end justify-center px-0 py-[24px] relative flex-[0_0_auto]" style={{zIndex: 2}}>
             <div className="flex items-start justify-between px-[45px] py-0 relative flex-1 grow">
               <div className="relative w-[60px] h-[60px] bg-[#ffffff] rounded-[30px]" />
               <div className="relative w-[50px] h-[50px] bg-[#1b1b1b] rounded-[25px]" />
