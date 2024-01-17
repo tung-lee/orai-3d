@@ -118,7 +118,7 @@ export const LandingPage = () => {
                 </div>
               </div>
               <div className="flex w-[691px] justify-end items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="w-[646px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
+                <p className="w-[450px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
                   Loren ipsun dolor sit anet, consectetur adipisci elit, sed
                   eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
                   enin ad ninin venian, quis nostrun exercitationen ullan
@@ -145,7 +145,7 @@ export const LandingPage = () => {
             </div>
             <div className="inline-flex items-center justify-center flex-[0_0_auto] flex-col relative">
               <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
+                <div className="relative w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]" style={{opacity: 0.7}}>
                   How It Works
                 </div>
               </div>
