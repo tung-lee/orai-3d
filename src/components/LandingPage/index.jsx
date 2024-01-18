@@ -1,5 +1,6 @@
 import Spline from "@splinetool/react-spline";
 import styles from "./LandingPage.module.css";
+import { Header } from "../Header";
 
 export const LandingPage = () => {
   return (
@@ -23,42 +24,7 @@ export const LandingPage = () => {
           </div>
         </div> */}
         <div className="flex flex-col w-[1512px] items-start absolute top-px left-0">
-          <div className="flex w-[1512px] items-center justify-between px-[45px] py-[21px] relative flex-[0_0_auto] bg-black border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
-            <img
-              className="relative w-[57.69px] h-[67px]"
-              alt="Logo"
-              src="logo_2.svg"
-            />
-            <div className="inline-flex items-center justify-center gap-[65px] relative flex-[0_0_auto]">
-              <div className="inline-flex items-center gap-[32px] relative flex-[0_0_auto]">
-                <div className="inline-flex items-end gap-[60px] relative flex-[0_0_auto]">
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Docs
-                  </div>
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Community
-                  </div>
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Launch Owallet
-                  </div>
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Product
-                  </div>
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Collection
-                  </div>
-                  <div className="relative w-fit mt-[-1.00px] font-header-3 font-[number:var(--header-3-font-weight)] text-[#ffffff] text-[length:var(--header-3-font-size)] tracking-[var(--header-3-letter-spacing)] leading-[var(--header-3-line-height)] [font-style:var(--header-3-font-style)]">
-                    Connect Wallet
-                  </div>
-                </div>
-              </div>
-              <img
-                className="relative w-[45px] h-[46px]"
-                alt="Frame"
-                src="avatar_2.svg"
-              />
-            </div>
-          </div>
+          <Header />
           <div className="flex w-[1512px] items-end justify-between relative flex-[0_0_auto]">
             <div className="flex items-center gap-[10px] px-[45px] py-0 relative flex-1 grow border-r [border-right-style:solid] border-collection-1-line">
               <img
@@ -134,7 +100,10 @@ export const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[1512px] items-end justify-center px-0 py-[24px] relative flex-[0_0_auto]" style={{zIndex: 2}}>
+          <div
+            className="flex w-[1512px] items-end justify-center px-0 py-[24px] relative flex-[0_0_auto]"
+            style={{ zIndex: 2 }}
+          >
             <div className="flex items-start justify-between px-[45px] py-0 relative flex-1 grow">
               <div className="relative w-[60px] h-[60px] bg-[#ffffff] rounded-[30px]" />
               <div className="relative w-[50px] h-[50px] bg-[#1b1b1b] rounded-[25px]" />
@@ -145,7 +114,10 @@ export const LandingPage = () => {
             </div>
             <div className="inline-flex items-center justify-center flex-[0_0_auto] flex-col relative">
               <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]" style={{opacity: 0.7}}>
+                <div
+                  className="relative w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]"
+                  style={{ opacity: 0.7 }}
+                >
                   How It Works
                 </div>
               </div>
