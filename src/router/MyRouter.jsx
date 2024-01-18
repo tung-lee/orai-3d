@@ -8,12 +8,11 @@ export default function MyRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<p>Home</p>} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="collections" element={<CollectionList />}>
           <Route path="add" element={<Form />} />
         </Route>
         <Route path="collections/:id" element={<App />}></Route>
-        <Route path="bot" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
   );

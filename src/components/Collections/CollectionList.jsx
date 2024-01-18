@@ -1,15 +1,13 @@
 import { useCollection } from "../../context/CollectionProvider";
 import { CollectionItem } from "./CollectionItem";
-import { Header } from "./Header";
+import { Header } from "../Header";
 import { SearchBar } from "./SearchBar";
-import { callChatbotApi } from "../../api/chatbot";
 
 export const CollectionList = () => {
-  callChatbotApi();
   const { collection } = useCollection();
 
   return (
-    <div className="bg-black w-full h-full">
+    <div className="bg-black w-full h-screen">
       <div className="bg-black border-r [border-right-style:solid] border-l [border-left-style:solid] border-transparent">
         <div className="">
           <div className="">
@@ -23,7 +21,6 @@ export const CollectionList = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black h-[78.5px]"></div>
     </div>
   );
 };
