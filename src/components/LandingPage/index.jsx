@@ -19,9 +19,9 @@ export const LandingPage = () => {
   }, []);
 
   const animate = () => {
-    // if (xPercent > 0) {
-    //   xPercent = -100;
-    // }
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
     // if (xPercent <= -100) {
     //   xPercent = 0;
     // }
