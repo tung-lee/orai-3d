@@ -12,6 +12,12 @@ const initialState = [
     image:
       "https://www.shutterstock.com/image-vector/paper-cup-filled-black-coffee-600nw-1801429321.jpg",
   },
+  {
+    id: 3,
+    name: "Shoes",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b14aba9a-f828-45d3-9607-b687b884aa7d/revolution-7-easyon-road-running-shoes-nNqdwt.png",
+  },
 ];
 const CollectionContext = createContext();
 
