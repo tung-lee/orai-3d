@@ -1,6 +1,8 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import {
+  AccumulativeShadows,
   OrbitControls,
+  RandomizedLight,
 } from "@react-three/drei";
 import { useControls } from "leva";
 
@@ -37,7 +39,7 @@ const CanvasModel = ({ collectionFound, decalImageURL }) => {
       <UpdateCamera />
       <ambientLight intensity={0.5} />
       <directionalLight intensity={0.5} position={[10, 10, 10]} />
-      {/* <Backdrop /> */}
+      <Backdrop />
       {collectionFound.name === "Shirt" && (
         <Shirt controls={controls} decalImageURL={decalImageURL} />
       )}
@@ -50,7 +52,7 @@ const CanvasModel = ({ collectionFound, decalImageURL }) => {
         />
       )}
       {collectionFound.name === "Shoes" && <Shoes />}
-      {/* <AccumulativeShadows
+      <AccumulativeShadows
         temporal
         frames={100}
         alphaTest={0.95}
@@ -67,7 +69,7 @@ const CanvasModel = ({ collectionFound, decalImageURL }) => {
           bias={0.01}
           size={10}
         />
-      </AccumulativeShadows> */}
+      </AccumulativeShadows>
       <OrbitControls makeDefault />
     </Canvas>
   );
