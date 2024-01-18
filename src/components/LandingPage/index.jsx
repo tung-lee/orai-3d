@@ -57,9 +57,7 @@ export const LandingPage = () => {
           <Header />
           <div className="flex w-[1512px] items-end justify-between relative flex-[0_0_auto]">
             <div className="flex items-center gap-[10px] px-[45px] py-0 relative flex-1 border-r [border-right-style:solid] border-collection-1-line">
-              <div
-                style={{ width: "16%", position: "relative" }}
-              >
+              <div style={{ width: "16%", position: "relative" }}>
                 <Spline scene="https://prod.spline.design/alh1qMHwFi0cy2MG/scene.splinecode" />
               </div>
               <p className="relative w-fit mt-[-1.00px] pl-[20px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[70px] tracking-[-7.00px] leading-[normal] border-l [border-left-style:solid] border-collection-1-line">
@@ -84,13 +82,13 @@ export const LandingPage = () => {
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={infiniteTextMove}
                   >
-                    NFTs IN A NUTSHELLL - 
+                    NFTs IN A NUTSHELLL -
                   </p>
                   <p
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={secondInfiniteTextMove}
                   >
-                    NFTs IN A NUTSHELLL - 
+                    - NFTs IN A NUTSHELLL 
                   </p>
                 </div>
               </div>
