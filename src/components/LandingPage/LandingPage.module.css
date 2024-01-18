@@ -12,3 +12,16 @@
   display: "flex";
   justify-content: "center";
 }
+
+.slider {
+  position: relative;
+
+  white-space: nowrap;
+}
+.slider p:nth-of-type(2) {
+  position: absolute;
+
+  left: 100%;
+
+  top: 0;
+}

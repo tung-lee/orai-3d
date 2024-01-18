@@ -1,8 +1,38 @@
 import Spline from "@splinetool/react-spline";
 import styles from "./LandingPage.module.css";
 import { Header } from "../Header";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export const LandingPage = () => {
+  const infiniteTextMove = useRef(null);
+  const secondInfiniteTextMove = useRef(null);
+
+  let xPercent = 0;
+  let direction = 1;
+
+  useEffect(() => {
+    // gsap.set(infiniteTextMove.current, {
+    //   left: infiniteTextMove.current.getBoundingClientRect().width,
+    // });
+    requestAnimationFrame(animate);
+  }, []);
+
+  const animate = () => {
+    // if (xPercent > 0) {
+    //   xPercent = -100;
+    // }
+    // if (xPercent <= -100) {
+    //   xPercent = 0;
+    // }
+
+    gsap.set(infiniteTextMove.current, { xPercent: xPercent });
+    gsap.set(secondInfiniteTextMove.current, { xPercent: xPercent });
+    xPercent += 0.1 * direction;
+
+    requestAnimationFrame(animate);
+  };
+
   return (
     <div className="bg-black flex flex-row justify-center w-full">
       <div className="bg-black overflow-hidden w-[1512px] h-[2690px] relative">
@@ -26,13 +56,13 @@ export const LandingPage = () => {
         <div className="flex flex-col w-[1512px] items-start absolute top-px left-0">
           <Header />
           <div className="flex w-[1512px] items-end justify-between relative flex-[0_0_auto]">
-            <div className="flex items-center gap-[10px] px-[45px] py-0 relative flex-1 grow border-r [border-right-style:solid] border-collection-1-line">
-              <img
-                className="relative w-[240.5px] h-[176px] object-cover"
-                alt="Image"
-                src="circle.png"
-              />
-              <p className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[70px] tracking-[-7.00px] leading-[normal]">
+            <div className="flex items-center gap-[10px] px-[45px] py-0 relative flex-1 border-r [border-right-style:solid] border-collection-1-line">
+              <div
+                style={{ width: "16%", position: "relative" }}
+              >
+                <Spline scene="https://prod.spline.design/alh1qMHwFi0cy2MG/scene.splinecode" />
+              </div>
+              <p className="relative w-fit mt-[-1.00px] pl-[20px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[70px] tracking-[-7.00px] leading-[normal] border-l [border-left-style:solid] border-collection-1-line">
                 The Evolution
                 <br />
                 of 3d Design Tools
@@ -49,11 +79,19 @@ export const LandingPage = () => {
           <div className="relative w-[1512px] h-[408px] overflow-hidden border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
             <div className="relative w-[4196px] h-[377px] top-[31px]">
               <div className="inline-flex items-center gap-[100px] px-[45px] py-0 absolute top-0 left-0">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]">
-                  NFTs IN A NUTSHELLL
-                </div>
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]">
-                  NFTs IN A NUTSHELLL
+                <div className={styles.slider}>
+                  <p
+                    className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
+                    ref={infiniteTextMove}
+                  >
+                    NFTs IN A NUTSHELLL
+                  </p>
+                  <p
+                    className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
+                    ref={secondInfiniteTextMove}
+                  >
+                    NFTs IN A NUTSHELLL
+                  </p>
                 </div>
               </div>
               {/* <img className="absolute w-[488px] h-[205px] top-[172px] left-[510px]" alt="Frame" src="frame-2.svg" /> */}
@@ -122,7 +160,7 @@ export const LandingPage = () => {
                   Orai3D simplifies the process of designing and minting NFTs by
                   integrating AI-generated images and user interaction through
                   Weminal's assistance. The platform securely stores the
-                  generated images on Eueno's decentralized storage. We
+                  generated images on Eueno's decentralized storage. <br /> We
                   encourages users to share their creations with other artists
                 </p>
               </div>
@@ -191,8 +229,8 @@ export const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className="relative w-[379px] h-[423px] border-l [border-left-style:solid] border-collection-1-line">
-              <img src="frame-5.svg" alt="" />
+            <div className="flex w-[379px] h-[423px] border-l [border-left-style:solid] border-collection-1-line justify-center items-center">
+              <img className="" src="frame-5.svg" alt="" />
             </div>
             <div className="flex w-[379px] h-[423px] items-center justify-center gap-[10px] px-0 py-[24px] relative border-l [border-left-style:solid] border-collection-1-line">
               <div className="relative w-[100px] h-[100px]">
