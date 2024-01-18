@@ -40,10 +40,9 @@ export const LandingPage = () => {
             </div>
             <div className="inline-flex justify-center px-[45px] py-[24px] self-stretch border-l [border-left-style:solid] border-collection-1-line items-center gap-[10px] relative flex-[0_0_auto]">
               <p className="w-[395px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                Loren ipsun dolor sit anet,
+                Built on the foundation of AIright <br /> Orai3D revolutionizes{" "}
                 <br />
-                consectetur adipisci elit, consectetur adipisci elit, sed
-                eiusnod tenpor incidunt ut labore et dolore nagna aliqua
+                the way creators interact with NFTs
               </p>
             </div>
           </div>
@@ -84,13 +83,10 @@ export const LandingPage = () => {
                 </div>
               </div>
               <div className="flex w-[691px] justify-end items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="w-[450px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur. Quis aute iure reprehenderit in voluptate velit
-                  esse cillun dolore eu fugiat nulla pariatur.
+                <p className="w-[450px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)] leading-5">
+                  Orai3D is an innovative platform that offers a dynamic
+                  environment for designing and <br /> collaborating on
+                  decentralized 3D assets.
                 </p>
               </div>
               <div className="inline-flex items-center justify-center gap-[10px] px-0 py-[24px] relative flex-[0_0_auto]">
@@ -122,13 +118,12 @@ export const LandingPage = () => {
                 </div>
               </div>
               <div className="flex w-[691px] justify-center items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="w-[646px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-center tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur. Quis aute iure reprehenderit in voluptate velit
-                  esse cillun dolore eu fugiat nulla pariatur.
+                <p className="w-[646px] mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-center tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)] leading-5">
+                  Orai3D simplifies the process of designing and minting NFTs by
+                  integrating AI-generated images and user interaction through
+                  Weminal's assistance. The platform securely stores the
+                  generated images on Eueno's decentralized storage. We
+                  encourages users to share their creations with other artists
                 </p>
               </div>
             </div>
@@ -159,45 +154,47 @@ export const LandingPage = () => {
             <div className="inline-flex items-end flex-[0_0_auto] ml-[-7px] flex-col relative">
               <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
                 <div className="w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] relative leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
-                  Loren ipsun
+                  Artwork Upload
                 </div>
               </div>
               <div className="flex w-[678px] justify-end items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="relative flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur. Quis aute iure reprehenderit in voluptate velit
-                  esse cillun dolore eu fugiat nulla pariatur.
+                <p className="relative flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)] leading-5">
+                  Users can upload their own artwork, <br /> giving them
+                  complete creative freedom over their object designs. <br />{" "}
+                  Objects can be uploaded from Blender, Unity, or other plugins
+                  using the .glb file format.
                 </p>
               </div>
             </div>
           </div>
           <div className="flex w-[1512px] items-center justify-between px-[45px] py-0 relative flex-[0_0_auto] border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
-            <div className="flex w-[562px] items-start flex-col relative">
+            <div
+              className="flex w-[562px] items-start flex-col relative"
+              style={{ padding: "40px 0" }}
+            >
               <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
                 <div className="w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] relative leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
-                  Loren ipsun
+                  3D Preview and Weminal Assistance
                 </div>
               </div>
               <div className="flex w-[563px] mr-[-1.00px] items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur. Quis aute iure reprehenderit in voluptate velit
-                  esse cillun dolore eu fugiat nulla pariatur.
+                <p className="flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] relative leading-[var(--text-line-height)] [font-style:var(--text-font-style)] leading-5">
+                  Users can view their customized object in real-time using the
+                  3D Preview feature. This enables them to see how the final
+                  design will look from different angles before completing it.
+                  <br />
+                  <br />
+                  Weminal can assist users by answering questions about which
+                  design prompts or themes may be most suitable for their
+                  project. Weminal is also able to generate original image
+                  concepts through AI, which may inspire new creative ideas
                 </p>
               </div>
             </div>
-            <img
-              className="relative w-[379px] h-[321px]"
-              alt="Frame"
-              src="frame-5.svg"
-            />
-            <div className="flex w-[379px] h-[321px] items-center justify-center gap-[10px] px-0 py-[24px] relative border-l [border-left-style:solid] border-collection-1-line">
+            <div className="relative w-[379px] h-[423px] border-l [border-left-style:solid] border-collection-1-line">
+              <img src="frame-5.svg" alt="" />
+            </div>
+            <div className="flex w-[379px] h-[423px] items-center justify-center gap-[10px] px-0 py-[24px] relative border-l [border-left-style:solid] border-collection-1-line">
               <div className="relative w-[100px] h-[100px]">
                 <div className="relative h-[100px] bg-[#ffffff] rounded-[50px]">
                   <div className="top-[6px] absolute left-[30px] font-header-1 font-[number:var(--header-1-font-weight)] text-black text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
@@ -207,7 +204,7 @@ export const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[1512px] items-center justify-between px-[45px] py-0 relative flex-[0_0_auto] border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
+          <div className="flex w-[1512px] items-center justify-between px-[26px] py-0 relative flex-[0_0_auto] border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
             <div className="flex w-[379px] h-[321px] items-center justify-center gap-[10px] px-0 py-[24px] relative border-r [border-right-style:solid] border-collection-1-line">
               <div className="relative w-[100px] h-[100px]">
                 <div className="relative h-[100px] bg-[#ffffff] rounded-[50px]">
@@ -222,20 +219,22 @@ export const LandingPage = () => {
               alt="Frame"
               src="frame-6.svg"
             />
-            <div className="inline-flex items-end flex-[0_0_auto] ml-[-6px] flex-col relative">
+            <div className="inline-flex items-start flex-[0_0_auto] flex-col relative">
               <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
                 <div className="w-fit mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] relative leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
-                  Loren ipsun
+                  Mint NFTs and Share <br /> Your Creation
                 </div>
               </div>
               <div className="flex w-[676px] justify-end items-center gap-[10px] relative flex-[0_0_auto]">
-                <p className="relative flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-right tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur. Quis aute iure reprehenderit in voluptate velit
-                  esse cillun dolore eu fugiat nulla pariatur.
+                <p className="relative flex-1 mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] text-left tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
+                  With a completed custom design saved in their Eueno workspace,
+                  users mint it as an NFT to proves their ownership on the
+                  blockchain and allows others to purchase and admire the work.
+                  <br />
+                  <br />
+                  Users have options to showcase their NFTs on social profiles.
+                  Shared links allow friends and communities to view the
+                  high-quality 3D renderings without the need to purchase.
                 </p>
               </div>
             </div>

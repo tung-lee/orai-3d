@@ -4,8 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        "box-color": "var(--box-color)",
         "collection-1-line": "var(--collection-1-line)",
+        hover: "var(--hover)",
+        "line-color": "var(--line-color)",
+        "purple-text": "var(--purple-text)",
         "text-color": "var(--text-color)",
+        white: "var(--white)",
       },
       fontFamily: {
         "big-text": "var(--big-text-font-family)",
