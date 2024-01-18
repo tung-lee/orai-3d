@@ -84,13 +84,13 @@ export const LandingPage = () => {
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={infiniteTextMove}
                   >
-                    NFTs IN A NUTSHELLL
+                    NFTs IN A NUTSHELLL -
                   </p>
                   <p
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={secondInfiniteTextMove}
                   >
-                    NFTs IN A NUTSHELLL
+                    NFTs IN A NUTSHELLL -
                   </p>
                 </div>
               </div>
