@@ -35,7 +35,7 @@ export const LandingPage = () => {
 
   return (
     <div className="bg-black flex flex-row justify-center w-full">
-      <div className="bg-black overflow-hidden w-[1512px] h-[2690px] relative">
+      <div className="bg-black overflow-hidden w-[1512px] h-[3150px] relative">
         {/* <div className="flex w-[1728px] items-end gap-[90px] px-[45px] py-0 absolute top-[2393px] left-[-1826px]">
           <div className="inline-flex flex-col items-start justify-center relative flex-[0_0_auto]">
             <div className="inline-flex items-center justify-center gap-[10px] pt-[24px] pb-0 px-0 relative flex-[0_0_auto]">
@@ -82,13 +82,13 @@ export const LandingPage = () => {
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={infiniteTextMove}
                   >
-                    NFTs IN A NUTSHELLL -  
+                    NFTs IN A NUTSHELLL -
                   </p>
                   <p
                     className="relative w-fit mt-[-1.00px] [font-family:'Lexend_Deca-Light',Helvetica] font-light text-[#ffffff] text-[225px] tracking-[-22.50px] leading-[normal]"
                     ref={secondInfiniteTextMove}
                   >
-                      - NFTs IN A NUTSHELLL 
+                    - NFTs IN A NUTSHELLL
                   </p>
                 </div>
               </div>
@@ -290,6 +290,50 @@ export const LandingPage = () => {
             alt="Frame"
             src="frame-7.svg"
           />
+          <div className="flex w-[1512px] items-start justify-between px-[45px] py-[40px] relative border-t [border-top-style:solid] border-b [border-bottom-style:solid] border-collection-1-line">
+            <div className="flex flex-col items-start pt-[24px] pb-0 px-0 relative self-stretch">
+              <div className="relative mt-[-1.00px] font-header-1 font-[number:var(--header-1-font-weight)] text-[#ffffff] text-[length:var(--header-1-font-size)] tracking-[var(--header-1-letter-spacing)] leading-[var(--header-1-line-height)] [font-style:var(--header-1-font-style)]">
+                Orai3D JOIN THE <br /> WAITLIST
+              </div>
+              <div className="flex w-[676px] h-[95px] items-center justify-end gap-[10px] relative mr-[-5.00px]">
+                <p className="relative flex-1 font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
+                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
+                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
+                  enin ad ninin venian, quis nostrun exercitationen ullan
+                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
+                  consequatur.
+                </p>
+              </div>
+            </div>
+            <div className="inline-flex flex-col items-end justify-center gap-[16px] relative flex-[0_0_auto]">
+              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  Name
+                </div>
+              </div>
+              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  Phone
+                </div>
+              </div>
+              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  Email
+                </div>
+              </div>
+              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+                <p className="relative flex-1 mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  How are you planning on using Orai3D and what feature do you
+                  think is the most crucial
+                </p>
+              </div>
+              <div className="inline-flex items-center justify-end gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-[#ffffff] text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  Send
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
