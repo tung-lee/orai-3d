@@ -5,7 +5,7 @@ const funds = [];
 
 export const getContractAddr = () => {
   const contractAddr =
-    "orai1094ellehzmlsqf6uax7lhlayggd6wf8vu2ejtlzfgk7e8d4pjgssglxvsf";
+    "orai1n27agkvx9jx58qdce5ezcp7cx3zuefhzt75gg0f6kvw5a9ucujuqygykf4";
 
   if (!contractAddr) {
     throw Error("Contract address not found");
@@ -52,7 +52,7 @@ export const approveCommit = async ({token_id, commit_id}) => {
     await getAddress(),
     getContractAddr(),
     {
-      approveCommit: {
+      approve_commit: {
         token_id,
         commit_id
       },

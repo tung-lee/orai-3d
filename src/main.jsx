@@ -7,13 +7,11 @@ import { AddressProvider } from "./context/AddressProvider";
 import { TokenProvider } from "./context/TokenProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <AddressProvider>
-      <CollectionProvider>
-        <TokenProvider>
-          <MyRouter />
-        </TokenProvider>
-      </CollectionProvider>
-    </AddressProvider>
-  </React.StrictMode>
+  <AddressProvider>
+    <CollectionProvider>
+      <TokenProvider>
+        <MyRouter />
+      </TokenProvider>
+    </CollectionProvider>
+  </AddressProvider>
 );

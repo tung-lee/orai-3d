@@ -11,6 +11,10 @@ export const LandingPage = () => {
   let xPercent = 0;
   let direction = 1;
 
+  gsap.config({
+    nullTargetWarn: false
+  })
+
   useEffect(() => {
     // gsap.set(infiniteTextMove.current, {
     //   left: infiniteTextMove.current.getBoundingClientRect().width,

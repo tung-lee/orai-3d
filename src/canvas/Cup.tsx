@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { useState } from "react";
-import { BASE64_CAT } from "../constant/index";
 import {
   useGLTF,
   useTexture,
@@ -20,13 +19,13 @@ export default function Cup(props) {
   const [rot, setRot] = useState([0, 0, 0]);
   const { nodes, materials } = useGLTF("/coffee-transformed.glb");
 
-  const { debug, image, scale } = props.controls;
+  const { debug, logo, full, logoScale, fullScale } = props.controls;
 
   const logoTexture = useTexture(
-    props.decalImageURL ? props.decalImageURL : BASE64_CAT
+    props.decalImageURL ? props.decalImageURL : logo
   );
   const fullTexture = useTexture(
-    props.decalImageURL ? props.decalImageURL : BASE64_CAT
+    props.decalImageURL ? props.decalImageURL : full
   );
 
   return (
@@ -63,7 +62,7 @@ export default function Cup(props) {
           <Decal
             position={[0, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={1 * scale}
+            scale={1 * fullScale}
             map={fullTexture}
           />
         )}
@@ -72,9 +71,9 @@ export default function Cup(props) {
             debug={debug}
             position={pos}
             rotation={rot}
-            scale={1 * scale}
+            scale={1 * logoScale}
             // map={useTexture(image)}
-            map={fullTexture}
+            map={logoTexture}
           />
         )}
       </mesh>

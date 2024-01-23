@@ -7,22 +7,22 @@ import { Decal, PivotControls, useGLTF, useTexture } from "@react-three/drei";
 
 import state from "../store";
 
-const Shirt = ({ controls }) => {
+const Shirt = ({ controls, decalImageURL }) => {
   const snap = useSnapshot(state);
   const [pos, setXYZ] = useState([0, 0.04, 0.15]);
   const [rot, setRot] = useState([0, 0, 0]);
 
   const { nodes, materials } = useGLTF("/shirt_baked.glb");
-  const { debug, image, scale } = controls;
+  const { debug, logo, full } = controls;
 
   // const logoTexture = useTexture(snap.logoDecal);
   // const fullTexture = useTexture(snap.fullDecal);
 
-  const fullTexture = useTexture(
-    "https://node1-gateway-ipfs.eueno.io/ipfs/QmWpouN8oxE2F67gA6Kxz8sZwn5KyCgXYbWCcn3TXwXPAy"
-  );
   const logoTexture = useTexture(
-    "https://node1-gateway-ipfs.eueno.io/ipfs/QmWpouN8oxE2F67gA6Kxz8sZwn5KyCgXYbWCcn3TXwXPAy"
+    decalImageURL ? decalImageURL : logo
+  );
+  const fullTexture = useTexture(
+    decalImageURL ? decalImageURL : full
   );
 
   useFrame((state, delta) =>

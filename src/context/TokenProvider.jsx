@@ -17,6 +17,12 @@ function TokenProvider({ children }) {
         const tokensInfo = await Promise.all(
           tokensId.map((tokenId) => getTokenInfo(tokenId))
         );
+
+        // add the tokenId to the tokenInfo object
+        tokensId.forEach((tokenId, index) => {
+          tokensInfo[index]["token_id"] = tokenId;
+        });
+
         setTokens(tokensInfo);
         console.log(tokensInfo);
       } catch (err) {

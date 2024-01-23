@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const initialState = [
   {
     id: 1,
-    name: "Shirt",
+    name: "T-Shirt",
     image: "https://i.ebayimg.com/images/g/4IsAAOSwpddgqEwp/s-l1200.jpg",
   },
   {

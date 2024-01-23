@@ -27,10 +27,12 @@ const CanvasModel = ({ collectionFound, decalImageURL }) => {
 
   const controls = useControls({
     debug: false,
-    image: { image: "/0dcfb548989afdf22afff75e2a46a508.jpg" },
-    scale: { value: 1, min: 0, max: 5 },
-    position: [5, 5, 2],
-    zoom: 140,
+    logo: { image: "/logo.png" },
+    full: { image: "/texture-18.png" },
+    logoScale: { value: 1, min: 0, max: 5 },
+    fullScale: { value: 1, min: 0, max: 5 },
+    position: [0, 0, 1],
+    zoom: 300,
   });
   const { position, zoom } = controls;
 
@@ -40,7 +42,7 @@ const CanvasModel = ({ collectionFound, decalImageURL }) => {
       <ambientLight intensity={0.5} />
       <directionalLight intensity={0.5} position={[10, 10, 10]} />
       <Backdrop />
-      {collectionFound.name === "Shirt" && (
+      {collectionFound.name === "T-Shirt" && (
         <Shirt controls={controls} decalImageURL={decalImageURL} />
       )}
       {collectionFound.name === "Cup" && (
