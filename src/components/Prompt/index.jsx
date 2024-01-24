@@ -39,19 +39,23 @@ export const Chatbot = ({
                       return <BotMsg type="image" message={message.message} />;
                     }
                   })}
-                  {isLoading && <Loader />}  
-                    <ToastContainer
-                      position="top-left"
-                      autoClose={5000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                      theme="light"
-                    />
+                  {/* <UserMsg message="tranquil waves blending blue 
+                  and purple seamlessly"/>
+                  <BotMsg type="text" message="Here is your texture"/>
+                  <BotMsg type="image" message="/texture-18.png" /> */}
+                  {isLoading && <Loader />}
+                  <ToastContainer
+                    position="top-left"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                  />
                 </div>
                 <div className="flex flex-col items-start gap-[10px] px-[23px] py-[16px] relative self-stretch w-full flex-[0_0_auto] bg-black">
                   <div className="flex items-center justify-between px-[16px] py-[17px] relative self-stretch w-full flex-[0_0_auto] rounded-[16px] border-2 border-solid border-[#818181]">

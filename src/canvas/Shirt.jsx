@@ -13,7 +13,7 @@ const Shirt = ({ controls, decalImageURL }) => {
   const [rot, setRot] = useState([0, 0, 0]);
 
   const { nodes, materials } = useGLTF("/shirt_baked.glb");
-  const { debug, logo, full } = controls;
+  const { debug, logo, full, logoScale, fullScale } = controls;
 
   // const logoTexture = useTexture(snap.logoDecal);
   // const fullTexture = useTexture(snap.fullDecal);
@@ -43,7 +43,7 @@ const Shirt = ({ controls, decalImageURL }) => {
           <Decal
             position={[0, 0, 0]}
             rotation={[0, 0, 0]}
-            scale={1}
+            scale={1 * fullScale}
             map={fullTexture}
           />
         )}
@@ -73,7 +73,7 @@ const Shirt = ({ controls, decalImageURL }) => {
             debug={debug}
             position={pos}
             rotation={rot}
-            scale={0.15}
+            scale={0.15 * logoScale}
             map={logoTexture}
             //map-anisotropy={16}
             // Had to comment this, apparently my PC is not powerfoul enough to hold it!

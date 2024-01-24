@@ -35,7 +35,7 @@ export const CommitList = ({
       {isShowCommits ? (
         <div
           className="absolute"
-          style={{ top: "-150px", left: "70px", zIndex: 1 }}
+          style={{ top: "-202px", left: "-5px", zIndex: 1 }}
         >
           <div className="bg-[#0d0d0d]">
 

@@ -3,7 +3,7 @@ export const BotMsg = ({ type, message }) => {
     <>
       {type === "text" && (
         <div className="inline-flex items-center p-[24px] relative flex-[0_0_auto] bg-[#f1f1f1] rounded-[24px_24px_24px_0px]">
-          <p className="relative w-fit mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-[#64568b] text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] whitespace-nowrap [font-style:var(--text-font-style)]">
+          <p className="overflow-wrap break-word relative w-fit mt-[-1.00px] font-text font-[number:var(--text-font-weight)] text-[#64568b] text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] whitespace-normal [font-style:var(--text-font-style)]">
             {message}
           </p>
         </div>
