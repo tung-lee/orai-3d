@@ -12,8 +12,8 @@ export const LandingPage = () => {
   let direction = 1;
 
   gsap.config({
-    nullTargetWarn: false
-  })
+    nullTargetWarn: false,
+  });
 
   useEffect(() => {
     // gsap.set(infiniteTextMove.current, {
@@ -301,39 +301,54 @@ export const LandingPage = () => {
               </div>
               <div className="flex w-[676px] h-[95px] items-center justify-end gap-[10px] relative mr-[-5.00px]">
                 <p className="relative flex-1 font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] [font-style:var(--text-font-style)]">
-                  Loren ipsun dolor sit anet, consectetur adipisci elit, sed
-                  eiusnod tenpor incidunt ut labore et dolore nagna aliqua. Ut
-                  enin ad ninin venian, quis nostrun exercitationen ullan
-                  corporis suscipit laboriosan, nisi ut aliquid ex ea connodi
-                  consequatur.
+                  Don't miss out on the chance to be a pioneer in the 3D NFT
+                  space. Together, let's redefine the way we experience and
+                  appreciate digital art.
+                  <br /> Stay tuned for updates, sneak peeks, and more surprises
+                  as we countdown to launch day! 🚀
                 </p>
               </div>
             </div>
             <div className="inline-flex flex-col items-end justify-center gap-[16px] relative flex-[0_0_auto]">
-              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
-                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
-                  Name
+              <div className="w-[654px] gap-[10px] px-[24px] py-[12px] relative border border-solid border-[#ffffff]">
+                <div className="relative mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="w-full bg-transparent"
+                  />
                 </div>
               </div>
-              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
-                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
-                  Phone
+              <div className="w-[654px] gap-[10px] px-[24px] py-[12px] relative border border-solid border-[#ffffff]">
+                <div className="relative mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full bg-transparent"
+                  />
                 </div>
               </div>
-              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
-                <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
-                  Email
+              <div className="w-[654px] gap-[10px] px-[24px] py-[12px] relative border border-solid border-[#ffffff]">
+                <div className="relative mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full bg-transparent"
+                  />
                 </div>
               </div>
-              <div className="flex w-[654px] items-center gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
+              <div className="w-[654px] gap-[10px] px-[24px] py-[12px] relative border border-solid border-[#ffffff]">
                 <p className="relative flex-1 mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-text-color text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
-                  How are you planning on using Orai3D and what feature do you
-                  think is the most crucial
+                  <input
+                    type="text"
+                    placeholder="How are you planning on using Orai3D and what feature do you think is the most crucial"
+                    className="w-full bg-transparent"
+                  />
                 </p>
               </div>
               <div className="inline-flex items-center justify-end gap-[10px] px-[24px] py-[12px] relative flex-[0_0_auto] border border-solid border-[#ffffff]">
                 <div className="relative w-fit mt-[-1.00px] font-big-text font-[number:var(--big-text-font-weight)] text-[#ffffff] text-[length:var(--big-text-font-size)] tracking-[var(--big-text-letter-spacing)] leading-[var(--big-text-line-height)] [font-style:var(--big-text-font-style)]">
-                  Send
+                  <button>Send</button>
                 </div>
               </div>
             </div>
