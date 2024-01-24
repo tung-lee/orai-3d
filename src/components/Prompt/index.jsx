@@ -59,15 +59,27 @@ export const Chatbot = ({
                 </div>
                 <div className="flex flex-col items-start gap-[10px] px-[23px] py-[16px] relative self-stretch w-full flex-[0_0_auto] bg-black">
                   <div className="flex items-center justify-between px-[16px] py-[17px] relative self-stretch w-full flex-[0_0_auto] rounded-[16px] border-2 border-solid border-[#818181]">
-                    <input
-                      className="w-[133px] relative w-fit font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] whitespace-nowrap [font-style:var(--text-font-style)]"
-                      value={prompt}
-                      placeholder="Ask something ..."
-                      style={{ background: "none" }}
-                      onChange={(evt) => setPrompt(evt.target.value)}
-                    />
-
-                    <div className="flex w-[199.33px] items-center justify-end gap-[6px] relative">
+                    <div className="flex items-center justify-end gap-[6px] relative">
+                      <input
+                        className="relative w-full font-text font-[number:var(--text-font-weight)] text-text-color text-[length:var(--text-font-size)] tracking-[var(--text-letter-spacing)] leading-[var(--text-line-height)] whitespace-nowrap [font-style:var(--text-font-style)]"
+                        value={prompt}
+                        placeholder="Ask something ..."
+                        style={{ background: "none" }}
+                        onKeyDown={(evt) => {
+                          if (evt.key === "Enter") {
+                            setMessages((prev) => [
+                              ...prev,
+                              {
+                                isUser: true,
+                                type: "text",
+                                message: prompt,
+                              },
+                            ]);
+                            genImgAndUploadToEueno(prompt);
+                          }
+                        }}
+                        onChange={(evt) => setPrompt(evt.target.value)}
+                      />
                       <div className="inline-flex items-center justify-end gap-[4px] relative flex-[0_0_auto]">
                         <div
                           className={`inline-flex items-center justify-end gap-[10px] px-[8px] py-[4px] relative flex-[0_0_auto] ${

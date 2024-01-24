@@ -15,13 +15,6 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
-          <motion.header {...slideAnimation("down")}>
-            <img
-              src="/logo.png"
-              alt="logo"
-              className="w-8 h-8 object-contain"
-            />
-          </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className="text-7xl">AI NFT Generator</h1>
